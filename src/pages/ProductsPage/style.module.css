@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+.backbtn {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  margin: 20px 10px;
+}
+.head {
+  display: flex;
+  justify-content: center;
+}
+.top {
+  margin: 30px;
+}

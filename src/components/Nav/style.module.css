@@ -1,0 +1,128 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-bottom: 40px;
+  background-color: white;
+  transition: transform 0.5s;
+}
+
+.logoBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 20px 20px;
+}
+.logoBlock a {
+  background-color: #339933;
+  border: 2px solid #339933;
+  border-radius: 5px;
+  width: 125px;
+  padding: 14px 30px 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.logoBlock img {
+  width: 72px;
+  height: 72px;
+}
+.linksBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+.linksBlock a {
+  text-decoration: none;
+  color: black;
+}
+.cart {
+  padding-right: 30px;
+}
+.cartIcon {
+  position: relative;
+}
+.cartBadge {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty {
+  width: 100px;
+}
+.empty p {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logoBlock {
+    order: 1;
+  }
+  .logoBlock a {
+    display: none;
+  }
+  .empty {
+    display: none;
+  }
+  .linksBlock {
+    order: 2;
+  }
+  .cart {
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logoBlock {
+    order: 1;
+  }
+  .logoBlock a {
+    display: none;
+  }
+  .empty {
+    display: none;
+  }
+  .linksBlock {
+    order: 2;
+    padding: 0 auto;
+    gap: 10px;
+  }
+  .cart {
+    order: 3;
+  }
+}
+@media (max-width: 480px) {
+  .linksBlock {
+    font-size: 14px;
+    padding-left: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}

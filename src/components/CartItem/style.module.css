@@ -1,0 +1,115 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.underline {
+  border-bottom: 2px solid #a7a7a7;
+}
+.img img {
+  width: 192px;
+  height: 166.64px;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.counterBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  border: 2px solid black;
+  justify-content: space-around;
+  border-radius: 10px;
+  width: 140px;
+  height: 40px;
+  align-items: center;
+}
+.counter button {
+  background-color: white;
+  border: none;
+  font-size: 30px;
+}
+.counter p {
+  font-weight: 600;
+}
+.productPrice .priceBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.discountedPrice {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.discountPercentage {
+  color: red;
+}
+.rmvBtn {
+  background-color: white;
+  border: none;
+  align-self: flex-start;
+}
+@media (max-width: 610px) {
+  .item {
+    width: 100%;
+  }
+  .productPrice .priceBlock {
+    width: 100%;
+  }
+  .counter {
+    width: 76px;
+  }
+  .discountedPrice {
+    font-size: 20px;
+  }
+}
+@media (max-width: 545px) {
+  .img img {
+    height: 100px;
+  }
+  .counterBlock p {
+    font-size: 14px;
+  }
+  .productPrice .priceBlock {
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .img img {
+    height: 70px;
+    width: 70px;
+  }
+}
+@media (max-width: 375px) {
+  .item {
+    width: auto;
+    margin: auto;
+  }
+  .productPrice .priceBlock {
+    width: 100%;
+  }
+  .counter {
+    width: 100%;
+  }
+}

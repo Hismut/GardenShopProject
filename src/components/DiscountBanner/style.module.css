@@ -1,0 +1,178 @@
+.discountBanner {
+  height: 476px;
+  background: linear-gradient(to right, #006300, #339933);
+  display: flex;
+  justify-content: space-around;
+}
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.text {
+  width: 469px;
+  height: 159px;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 473px;
+  height: 181.4px;
+}
+.phoneInput {
+  height: 75.44px;
+  border-radius: 25.15px;
+  border: none;
+  padding-left: 20px;
+}
+.input button {
+  height: 75.44px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 25.15px;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+}
+@media (max-width: 1320px) {
+  .discountBanner {
+    width: 100%;
+    height: 400px;
+  }
+  .leftBlock {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .discountBanner {
+    height: 350px;
+  }
+  .text {
+    font-size: 30px;
+  }
+  .phoneInput {
+    height: 40px;
+    border-radius: 25.15px;
+    border: none;
+    padding-left: 20px;
+  }
+  .input button {
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25.15px;
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 473px;
+    height: 90px;
+  }
+}
+@media (max-width: 515px) {
+  .discountBanner {
+    height: 300px;
+  }
+  .rightBlock {
+    margin-left: 90px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .phoneInput {
+    height: 40px;
+    border-radius: 25.15px;
+    border: none;
+    padding-left: 20px;
+  }
+  .input button {
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25.15px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 90px;
+  }
+}
+@media (max-width: 400px) {
+  .discountBanner {
+    height: 300px;
+  }
+  .rightBlock {
+    margin-left: 100px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .phoneInput {
+    height: 40px;
+    border-radius: 25.15px;
+    border: none;
+    padding-left: 20px;
+  }
+  .input button {
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25.15px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 90px;
+  }
+}
+@media (max-width: 375px) {
+  .discountBanner {
+    height: 300px;
+  }
+  .rightBlock {
+    margin-left: 130px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .phoneInput {
+    height: 40px;
+    border-radius: 25.15px;
+    border: none;
+    padding-left: 20px;
+  }
+  .input button {
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25.15px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 90px;
+  }
+}

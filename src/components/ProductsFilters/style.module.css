@@ -1,0 +1,81 @@
+.filterBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin: auto auto auto 30px;
+  /* justify-content: flex-start; */
+}
+.filterBlock p {
+  width: 57px;
+  height: 26px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.filterBlock input {
+  width: 103px;
+  height: 42px;
+  border: 1px solid black;
+  border-radius: 7px;
+  text-align: center;
+}
+.priceFilter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.checkbox {
+  width: 270px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.checkbox p {
+  width: 191px;
+  height: 26px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.checkbox input[type="checkbox"]:checked {
+  filter: invert(1) hue-rotate(40deg);
+}
+
+.sorted {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 333px;
+  height: 40px;
+}
+.sorted p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.search input {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 333px;
+  height: 40px;
+}
+
+@media (max-width: 1190px) {
+  .search {
+    display: none;
+  }
+}
+@media (max-width: 980px) {
+  .sorted {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .checkbox {
+    display: none;
+  }
+}
+@media (max-width: 395px) {
+  .filterBlock {
+    display: none;
+  }
+}
