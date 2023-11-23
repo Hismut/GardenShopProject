@@ -1,4 +1,7 @@
 .errorPage {
   height: 625px;
-  width: 1440px;
+  width: 100%;
+}
+.errorPage img {
+  width: 100%;
 }

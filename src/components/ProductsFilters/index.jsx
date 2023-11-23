@@ -40,30 +40,6 @@ export default function ProductsFilters({ showDiscountedCheckbox }) {
   const sortHandler = ({ value }) => {
     dispatch(sortFilter(value));
   };
-  const customStyles = {
-    control: (base) => ({
-      ...base,
-      height: "40px",
-      display: "flex",
-      alignItems: "center",
-    }),
-    valueContainer: (base) => ({
-      ...base,
-      height: "40px",
-      display: "flex",
-      alignItems: "center",
-    }),
-    singleValue: (base) => ({
-      ...base,
-      height: "40px",
-      lineHeight: "40px",
-    }),
-    dropdownIndicator: (base) => ({
-      ...base,
-      height: "40px",
-      lineHeight: "40px",
-    }),
-  };
 
   return (
     <Container>
@@ -108,7 +84,6 @@ export default function ProductsFilters({ showDiscountedCheckbox }) {
             placeholder={"By default"}
             onChange={sortHandler}
             options={sortOptions}
-            styles={customStyles}
           />
         </div>
 

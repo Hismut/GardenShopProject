@@ -2,6 +2,7 @@ import React from "react";
 import s from "./style.module.css";
 import { useDispatch } from "react-redux";
 import { decr, incr, remove } from "../../store/slice/cartSlice";
+import { Link } from "react-router-dom";
 
 export default function CartItem({
   id,
@@ -19,7 +20,9 @@ export default function CartItem({
   return (
     <div className={[s.item, underline ? s.underline : ""].join(" ")}>
       <div className={s.img}>
-        <img src={image} alt={title} />
+        <Link to={`/products/${id}`}>
+          <img src={image} alt={title} />
+        </Link>
       </div>
       <div className={s.counterBlock}>
         <p>{title}</p>

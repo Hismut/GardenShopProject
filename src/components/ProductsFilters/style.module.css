@@ -51,6 +51,10 @@
   font-size: 20px;
   font-weight: 600;
 }
+.sorted input {
+  height: 33px;
+}
+
 .search input {
   display: flex;
   gap: 40px;

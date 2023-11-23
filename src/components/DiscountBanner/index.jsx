@@ -27,16 +27,33 @@ export default function DiscountBanner() {
       },
     });
     const discount = await resp.json();
+    if (discount.status === "OK") {
+      notify();
+    }
     console.log(discount);
   }
   const submit = (event) => {
     event.preventDefault();
     const { number } = event.target;
+    const phoneNumberRegex = /^\+49 \d{3} \d{3}-\d{2}-\d{2}$/;
+    if (!phoneNumberRegex.test(number.value)) {
+      toast.error("Please, enter a valid phone number!!!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
     const data = {
       number: number.value,
     };
     fetchAdd(data);
-    notify();
+    console.log(data);
     event.target.reset();
   };
 
@@ -58,8 +75,8 @@ export default function DiscountBanner() {
               <InputMask
                 mask="+49 BAA AAA-AA-AA"
                 maskChar={null}
-                alwaysShowMask={true}
                 formatChars={{ A: "[0-9]", B: "[0-9]" }}
+                placeholder="PHONE NUMBER"
               >
                 {(inputProps) => (
                   <input

@@ -50,6 +50,24 @@ export default function OrderDetails() {
   const submit = (event) => {
     event.preventDefault();
     const { number } = event.target;
+
+    const phoneNumberRegex = /^\+49 \d{3} \d{3}-\d{2}-\d{2}$/;
+    if (!phoneNumberRegex.test(number.value) || cartData.length === 0) {
+      toast.error(
+        "Please, enter a valid phone number! Or your cart is empty!",
+        {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
+      return;
+    }
     const data = {
       number: number.value,
     };
@@ -72,8 +90,8 @@ export default function OrderDetails() {
             <InputMask
               mask="+49 BAA AAA-AA-AA"
               maskChar={null}
-              alwaysShowMask={true}
               formatChars={{ A: "[0-9]", B: "[0-9]" }}
+              placeholder="PHONE NUMBER"
             >
               {(inputProps) => (
                 <input {...inputProps} name="number" className={s.phoneInput} />
