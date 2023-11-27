@@ -19,11 +19,19 @@ export default function Nav() {
       }
     }
 
+    function handleScroll() {
+      if (active) {
+        setActive(false);
+      }
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [navRef]);
+  }, [navRef, active]);
 
   return (
     <Container>
