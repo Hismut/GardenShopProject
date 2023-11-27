@@ -7,6 +7,8 @@ import { useDispatch } from "react-redux";
 import { fetchProducts } from "../../store/slice/productsSlice";
 import { fetchCategories } from "../../store/slice/categorySlice";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "react-scroll-to-top";
+import s from "./style.module.css";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -35,6 +37,7 @@ export default function App() {
           <Route {...route} />
         ))}
       </Routes>
+      <ScrollToTop smooth className={s.scrollBtn} />
       <Footer />
     </div>
   );
