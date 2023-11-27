@@ -37,6 +37,7 @@
   color: white;
   font-weight: 700;
   font-size: 28px;
+  cursor: pointer;
 }
 @media (max-width: 1320px) {
   .discountBanner {

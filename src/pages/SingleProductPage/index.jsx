@@ -24,7 +24,11 @@ export default function SingleProductPage() {
   const product = products.find((item) => item.id === +id);
 
   if (!product) {
-    return "Product not found";
+    return (
+      <div className={s.notFound}>
+        <img src="/media/NO_Product_found.jpeg" alt="Product not found" />
+      </div>
+    );
   }
 
   const image = `http://localhost:3333/${product.image}`;

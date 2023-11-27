@@ -22,12 +22,17 @@ export default function CategoryProductsPage() {
 
   const result = products.filter((product) => product.categoryId === +id);
 
+  if (!category) {
+    return (
+      <div className={s.notFound}>
+        <h2 className={s.h2}>"Category not found"</h2>
+        <img src="/media/Category_not_found.png" alt="Category not found" />
+      </div>
+    );
+  }
   return (
     <div>
       <Container>
-        <h2 className={s.h2}>
-          {category ? category.title : "Category not found"}
-        </h2>
         <Link to="#" onClick={() => navigate(-1)} className={s.backbtn}>
           <IoIosArrowBack />
           Back

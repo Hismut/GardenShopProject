@@ -68,6 +68,7 @@
   font-weight: 700;
   font-size: 28px;
   display: inline-block;
+  cursor: pointer;
 }
 .phoneInput {
   height: 70px;
@@ -125,7 +126,7 @@
     width: 99%;
     height: 48px;
     margin: auto;
-    padding-left: 1px;
+    padding-left: 2px;
   }
   .orderButton {
     width: 100%;

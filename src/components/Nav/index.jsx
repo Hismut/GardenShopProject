@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import s from "./style.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "./links";
@@ -11,9 +11,24 @@ export default function Nav() {
   const totalItems = cart.reduce((total, item) => total + item.count, 0);
   const [active, setActive] = useState(false);
 
+  const navRef = useRef();
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActive(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navRef]);
+
   return (
     <Container>
       <nav
+        ref={navRef}
         onClick={() => setActive(false)}
         className={[s.nav, active ? s.active : ""].join(" ")}
       >

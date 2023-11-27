@@ -44,56 +44,59 @@ export default function ProductsFilters({ showDiscountedCheckbox }) {
   return (
     <Container>
       <div className={s.filterBlock}>
-        <div className={s.priceFilter}>
-          <p>Price</p>
-          <input
-            type="number"
-            name="min"
-            placeholder="From"
-            value={price.min === 0 ? "" : price.min}
-            onChange={changePrice}
-          />
-          <input
-            type="number"
-            name="max"
-            placeholder="to"
-            value={price.max === Infinity ? "" : price.max}
-            onChange={changePrice}
-          />
-        </div>
-        {showDiscountedCheckbox && (
-          <div className={s.checkbox}>
-            <p>Discounted items</p>
+        <div className={s.leftBlock}>
+          <div className={s.priceFilter}>
+            <p>Price</p>
             <input
-              type="checkbox"
-              onChange={(e) =>
-                dispatch(
-                  priceFilter({
-                    min: price.min,
-                    max: price.max,
-                    showDiscounted: e.target.checked,
-                  })
-                )
-              }
+              type="number"
+              name="min"
+              placeholder="From"
+              value={price.min === 0 ? "" : price.min}
+              onChange={changePrice}
+            />
+            <input
+              type="number"
+              name="max"
+              placeholder="to"
+              value={price.max === Infinity ? "" : price.max}
+              onChange={changePrice}
             />
           </div>
-        )}
-        <div className={s.sorted}>
-          <p>Sorted</p>
-          <Select
-            placeholder={"By default"}
-            onChange={sortHandler}
-            options={sortOptions}
-          />
+          {showDiscountedCheckbox && (
+            <div className={s.checkbox}>
+              <p>Discounted items</p>
+              <input
+                type="checkbox"
+                onChange={(e) =>
+                  dispatch(
+                    priceFilter({
+                      min: price.min,
+                      max: price.max,
+                      showDiscounted: e.target.checked,
+                    })
+                  )
+                }
+              />
+            </div>
+          )}
         </div>
-
-        <div className={s.search}>
-          <input
-            type="text"
-            name="search"
-            placeholder="Search"
-            onChange={searchHandler}
-          />
+        <div className={s.rightBlock}>
+          <div className={s.sorted}>
+            <p>Sorted</p>
+            <Select
+              placeholder={"By default"}
+              onChange={sortHandler}
+              options={sortOptions}
+            />
+          </div>
+          <div className={s.search}>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search"
+              onChange={searchHandler}
+            />
+          </div>
         </div>
       </div>
     </Container>

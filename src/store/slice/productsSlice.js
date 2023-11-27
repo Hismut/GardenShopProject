@@ -60,6 +60,7 @@ const productsSlice = createSlice({
       }));
     },
   },
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
