@@ -27,18 +27,25 @@ export default function ProductsPage() {
           <ProductsFilters showDiscountedCheckbox={true} />
         </div>
         <div className={s.container}>
-          {list
-            .filter(({ show }) => Object.values(show).every((elem) => elem))
-            .map((product) => (
-              <ProductItem
-                key={product.id}
-                id={product.id}
-                title={product.title}
-                image={`http://localhost:3333/${product.image}`}
-                price={product.price}
-                discont_price={product.discont_price}
-              />
-            ))}
+          {list.filter(({ show }) => Object.values(show).every((elem) => elem))
+            .length > 0 ? (
+            list
+              .filter(({ show }) => Object.values(show).every((elem) => elem))
+              .map((product) => (
+                <ProductItem
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  image={`http://localhost:3333/${product.image}`}
+                  price={product.price}
+                  discont_price={product.discont_price}
+                />
+              ))
+          ) : (
+            <div className={s.notFound}>
+              <img src="/media/NO_Product_found.jpeg" alt="No product found" />
+            </div>
+          )}
         </div>
       </div>
     </Container>
