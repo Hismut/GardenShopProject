@@ -10,8 +10,8 @@ import s from "./style.module.css";
 import Select from "react-select";
 
 export default function ProductsFilters({ showDiscountedCheckbox }) {
-  const [price, setPrice] = useState({ min: 0, max: Infinity });
   const dispatch = useDispatch();
+  const [price, setPrice] = useState({ min: 0, max: Infinity });
 
   useEffect(() => {
     dispatch(priceFilter(price));
